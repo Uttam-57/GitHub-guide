@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guide to Git and GitHub, including setup, commands, and usage.">
+    <title>Git and GitHub Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #020032;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #e5e5e5;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(29, 2, 79, 0.1);
+        }
+
+        h2 {
+            color: #0a0344;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 10px;
+            font-family: Consolas, monospace;
+        }
+
+        pre {
+            background: #afb1c8;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #007bff;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Git and GitHub Guide</h1>
+    </header>
+
+    <main>
+        <h2>What is Git?</h2>
+        <p>Git is a version control system that tracks changes in your files, allowing collaboration and easy management
+            of your codebase.</p>
+
+        <h2>What is GitHub?</h2>
+        <p>GitHub is a platform for hosting and managing Git repositories online, enabling teams to collaborate on
+            projects.</p>
+
+        <h2>Setup Git</h2>
+        <ol>
+            <li><strong>Install Git:</strong> Download Git from <a href="https://git-scm.com"
+                    target="_blank">git-scm.com</a> and follow the installation instructions.</li>
+            <li><strong>Configure Git:</strong>
+                <pre>git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+                </pre>
+            </li>
+            <li><strong>Check Configuration:</strong>
+                <pre>git config --list</pre>
+            </li>
+        </ol>
+
+        <h2>Basic Git Commands</h2>
+        <h3>Initialize a Repository</h3>
+        <p>Start tracking files in a folder:</p>
+        <pre>git init</pre>
+
+        <h3>Clone a Repository</h3>
+        <p>Copy an existing repository from GitHub:</p>
+        <pre>git clone &lt;repository-url&gt;</pre>
+
+        <h3>Check Repository Status</h3>
+        <p>See the current status of files:</p>
+        <pre>git status</pre>
+
+        <h3>Add Files to Staging</h3>
+        <p>Stage specific files for the next commit:</p>
+        <pre>git add &lt;file-name&gt;</pre>
+        <p>Stage all files:</p>
+        <pre>git add .</pre>
+
+        <h3>Commit Changes</h3>
+        <p>Save staged changes to the repository:</p>
+        <pre>git commit -m "Your commit message"</pre>
+
+        <h3>View Commit History</h3>
+        <p>See the log of commits:</p>
+        <pre>git log</pre>
+
+        <h3>Connect to Remote Repository</h3>
+        <p>Add a remote repository URL:</p>
+        <pre>git remote add origin &lt;repository-url&gt;</pre>
+
+        <h3>Push Changes to GitHub</h3>
+        <p>Send changes to the remote repository:</p>
+        <pre>git push origin &lt;branch-name&gt;</pre>
+
+        <h3>Pull Changes from GitHub</h3>
+        <p>Download changes from the remote repository:</p>
+        <pre>git pull origin &lt;branch-name&gt;</pre>
+
+        <h2>Branching and Merging</h2>
+        <h3>Create a New Branch</h3>
+        <pre>git branch &lt;branch-name&gt;</pre>
+
+        <h3>Switch to a Branch</h3>
+        <pre>git checkout &lt;branch-name&gt;</pre>
+
+        <h3>Create and Switch to a New Branch</h3>
+        <pre>git checkout -b &lt;branch-name&gt;</pre>
+
+        <h3>Merge Branches</h3>
+        <pre>git merge &lt;branch-name&gt;</pre>
+
+        <h2>Undo Changes</h2>
+        <h3>Unstage Files</h3>
+        <pre>git reset &lt;file-name&gt;</pre>
+
+        <h3>Revert to a Previous Commit</h3>
+        <pre>git revert &lt;commit-id&gt;</pre>
+
+        <h2>GitHub Commands</h2>
+        <h3>Fork a Repository</h3>
+        <p>Click "Fork" on the repository page on GitHub to create a copy under your account.</p>
+
+        <h3>Open a Pull Request</h3>
+        <ol>
+            <li>Push your branch to GitHub.</li>
+            <li>Go to the repository on GitHub.</li>
+            <li>Click "Compare & Pull Request".</li>
+            <li>Write a description and submit the pull request.</li>
+        </ol>
+
+        <h2>Helpful Commands</h2>
+        <h3>View Current Branch</h3>
+        <pre>git branch</pre>
+
+        <h3>Delete a Branch</h3>
+        <pre>git branch -d &lt;branch-name&gt;</pre>
+
+        <h3>Force Push</h3>
+        <p>Use with caution; it overwrites remote history:</p>
+        <pre>git push origin &lt;branch-name&gt; --force</pre>
+    </main>
+
+    <footer>
+        <p>For more information, visit the <a href="https://git-scm.com/doc" target="_blank">official Git
+                documentation</a>.</p>
+    </footer>
+
+</body>
+
+</html>
